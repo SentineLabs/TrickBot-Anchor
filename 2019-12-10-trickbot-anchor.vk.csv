@@ -1,0 +1,40 @@
+uuid,event_id,category,type,value,comment,to_ids,date,object_relation,attribute_tag,object_uuid,object_name,object_meta_category
+"5defbfb0-f840-4e2d-9186-03df68f8e8cf",1294,"Payload installation","yara","rule crime_win32_memscraper_1
+{
+meta:
+      description = ""Detects Anchor MemScraper malware""
+      author = ""Jason Reaves""
+
+strings:
+$s1 = {74656c6c6572000073686f700000000073746f7265000000}
+condition: 
+any of them
+}","MemScraper Yara",0,1575993264,"","","","",""
+"5defbfce-cb0c-4c33-8b93-74cf68f8e8cf",1294,"Payload installation","yara","rule crime_win32_anchor_trick_1
+{
+meta:
+      description = ""Detects Anchor malware""
+      author = ""Jason Reaves""
+
+strings: 
+$s1 = ""D:\\Win32.ogw0rm"" nocase
+$s2 = ""MyProjects\\memoryScraper"" nocase
+$s3 = ""\\MyProjects\\secondWork\\Anchor"" nocase
+$s4 = ""\\MyProjects\\secondWork\\psExecutor"" nocase
+$s5 = ""\\MyProjects\\mailCollection"" nocase
+$s6 = ""\\MyProjects\\spreader"" nocase
+condition:
+any of them
+}","Trick Anchor Yara",0,1575993294,"","","","",""
+"5defc04d-a59c-47ac-a1a5-03fd19d2faa1",1294,"Payload delivery","sha256","e54a267e788cc076c870eba0ff16920f9cb49207a034a8b6bfd92abc5a5f7434","Memscraper payload",1,1575993421,"","","","",""
+"5defc04d-4b78-433d-9f82-03fd19d2faa1",1294,"Payload delivery","sha256","d584e868f867c6251e115b7909559da784f25b778192c6a24e49685f80257e4d","Memscraper payload",1,1575993421,"","","","",""
+"5defc04d-08c0-4909-85e3-03fd19d2faa1",1294,"Payload delivery","sha256","354936f4265a5e870374a3fe9378cf9a3e7dd45ee4626b971d6b7b0837f4f181","Memscraper DNS variant",1,1575993421,"","","","",""
+"5defc04d-e5c0-4a82-b368-03fd19d2faa1",1294,"Payload delivery","sha256","54257aa2394ef87dd510da00e0583b670f3eb43e2eef86be4db69c3432e99abd","Memscraper DNS variant",1,1575993421,"","","","",""
+"5defc04d-f520-4bdf-9db1-03fd19d2faa1",1294,"Payload delivery","sha256","b288c3b3f5886b1cd7b6600df2b8046f2c0fd17360fb188ecfbcc8f6b7e552a5","Anchor Deinstaller",1,1575993421,"","","","",""
+"5defc04d-d238-48e8-889e-03fd19d2faa1",1294,"Payload delivery","sha256","52a1ca4e65a99f997db0314add8c3b84c6f257844eda73ae6e5debce6abc2bd4","Anchor Installer",1,1575993421,"","","","",""
+"5defc04d-9ca4-4559-b23a-03fd19d2faa1",1294,"Payload delivery","sha256","6500190bf8253c015700eb071416cbe33a1c8f3b84aeb28b7118a6abe96005e3","Anchor Bot",1,1575993421,"","","","",""
+"5defc04d-2934-4c99-a39f-03fd19d2faa1",1294,"Payload delivery","sha256","6b1759936993f02df80b330d11c1b12accd53a80b6207cd1defc555e6e4bf57c","Anchor DNS variant",1,1575993421,"","","","",""
+"5defc0ca-4190-4543-9d3a-040819d2faa1",1294,"Payload delivery","sha256","e49e6f0b194ff7c83ec02b3c2efc9e746a4b2ba74607a4aad8fbdcdc66baa8dc","Anchor DNS variant",1,1575993546,"","","","",""
+"5defc425-9808-4e88-a170-74d168f8e8cf",1294,"Payload installation","sha256","b02494ffc1dab60510e6caee3c54695e24408e5bfa6621adcd19301cfc18e329","Anchor DNS variant",1,1575994405,"","","","",""
+"5defc425-8690-4042-9e2d-74d168f8e8cf",1294,"Payload installation","sha256","c6d466600371ced9d962594474a4b8b0ccff19adc59dbd2027c10d930afbe282","Anchor DNS variant",1,1575994405,"","","","",""
+
